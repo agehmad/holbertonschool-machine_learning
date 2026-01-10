@@ -8,7 +8,7 @@ import pandas as pd
 def from_numpy(array):
     """
     Docstring for from_numpy
-    
+
     :param array: Description
     """
     num_columns = array.shape[1]
