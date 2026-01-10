@@ -5,6 +5,6 @@ Docstring for pipeline.pandas.1-from_dictionary
 import pandas as pd
 
 
-data = {'First':[0.0, 0.5, 1.0, 1.5],
-        'Second':['one', 'two', 'three', 'four']}
+data = {'First': [0.0, 0.5, 1.0, 1.5],
+        'Second': ['one', 'two', 'three', 'four']}
 df = pd.DataFrame(data, index=['A', 'B', 'C', 'D'])
