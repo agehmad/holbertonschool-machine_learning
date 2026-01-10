@@ -5,7 +5,6 @@ documented
 import pandas as pd
 
 
-
 def from_numpy(array):
     """
     Docstring for from_numpy
