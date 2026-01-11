@@ -21,7 +21,7 @@ def concat(df1, df2):
     df2 = index(df2)
 
     # Filter df2: include all timestamps up to and including 1417411920
-    df2 = df2.loc[: 1417411920]
+    df2 = df2[df2.index <= 1417411920]
 
     # Concatenate:  df2 on top of df1, with keys
     result = df1.__class__. concat(
