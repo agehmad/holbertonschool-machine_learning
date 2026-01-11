@@ -10,5 +10,5 @@ def high(df):
 
     :param df: Description
     """
-    df = df.sort_values(by='High', ascending=True)
+    df = df.sort_values(['High'], ascending=True)
     return df
