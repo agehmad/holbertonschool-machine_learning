@@ -12,5 +12,5 @@ def array(df):
     :param df: Description
     """
     df = df.iloc[:10]
-    df = df.values
+    df = df.to_numpy()
     return df
