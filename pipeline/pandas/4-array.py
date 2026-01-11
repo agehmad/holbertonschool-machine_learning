@@ -2,7 +2,6 @@
 """
 Docstring for pipeline.pandas.2-from_file
 """
-import pandas as pd
 
 
 def array(df):
