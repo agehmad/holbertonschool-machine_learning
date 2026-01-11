@@ -3,6 +3,7 @@
 Docstring for pipeline.pandas.11-concat
 """
 import pandas as pd
+index = __import__('10-index').index
 
 
 def concat(df1, df2):
@@ -13,8 +14,6 @@ def concat(df1, df2):
     :param df2: pd.DataFrame (bitstamp)
     :return: concatenated pd.DataFrame
     """
-    # Import the index function from 10-index.py
-    index = __import__('10-index').index
 
     # Index both dataframes on their Timestamp columns
     df1 = index(df1)
