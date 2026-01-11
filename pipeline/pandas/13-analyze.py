@@ -8,5 +8,6 @@ def analyze(df):
 
     :param df: Description
     """
+    df = df.drop('Timestamp', axis=1)
     df = df.describe()
     return df
