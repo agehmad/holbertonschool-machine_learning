@@ -3,7 +3,6 @@
 Docstring for pipeline.pandas.2-from_file
 """
 import pandas as pd
-import numpy as np
 
 
 def array(df):
@@ -13,5 +12,5 @@ def array(df):
     :param df: Description
     """
     df = df.iloc[:10]
-    df = np.array(df)
+    df = df.values
     return df
