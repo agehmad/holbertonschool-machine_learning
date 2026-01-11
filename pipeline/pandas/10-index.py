@@ -11,3 +11,4 @@ def index(df):
     :param df: Description
     """
     df = df.set_index('Timestamp')
+    return df
