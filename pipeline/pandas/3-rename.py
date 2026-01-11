@@ -13,5 +13,5 @@ def rename(df):
     """
     df = df.rename(columns={'Timestamp': 'Datetime'})
     df['Datetime'] = pd.to_datetime(df['Datetime'])
-    df = df['Datetime', 'Close']
+    df = df[['Datetime', 'Close']]
     return df
