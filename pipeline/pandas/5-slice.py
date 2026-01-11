@@ -6,5 +6,5 @@ Docstring for pipeline.5-slice
 
 def slice(df):
     df = df[['High', 'Low', 'Close', 'Volume_BTC']]
-    df = df.iloc[60]
+    df = df.iloc[60:61]
     return df
