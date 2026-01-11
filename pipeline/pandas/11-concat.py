@@ -8,7 +8,7 @@ index = __import__('10-index').index
 
 def concat(df1, df2):
     """
-    Concatenates two DataFrames with specific conditions. 
+    Concatenates two DataFrames with specific conditions.
 
     :param df1: pd. DataFrame (coinbase)
     :param df2: pd.DataFrame (bitstamp)
