@@ -24,3 +24,4 @@ def two():
     plt.title("Exponential Decay of Radioactive Elements")
     plt.xlabel("Time (years)")
     plt.ylabel("Fraction Remaining")
+    plt.legend()
