@@ -5,6 +5,7 @@ Docstring for math.plotting.4-frequency
 import numpy as np
 import matplotlib.pyplot as plt
 
+
 def frequency():
     """
     Docstring for frequency
