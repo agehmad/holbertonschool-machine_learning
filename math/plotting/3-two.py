@@ -18,7 +18,7 @@ def two():
     y2 = np.exp((r / t2) * x)
     plt.figure(figsize=(6.4, 4.8))
     plt.plot(x, y1, linestyle='dashed', color='red', label='C-14')
-    plt.plot(x, y2, color='green', label='Ra-226')
+    plt.plot(x, y2, linestyle='solid', color='green', label='Ra-226')
     plt.xlim(0, 20000)
     plt.ylim(0, 1)
     plt.title("Exponential Decay of Radioactive Elements")
