@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
+"""
+documented
+"""
 import numpy as np
 import matplotlib.pyplot as plt
-"""
-documentation
-"""
 
 
 def line():
