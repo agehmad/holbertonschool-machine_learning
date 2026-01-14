@@ -12,7 +12,8 @@ def frequency():
     np.random.seed(5)
     student_grades = np.random.normal(68, 15, 50)
     plt.figure(figsize=(6.4, 4.8))
-    plt.hist(student_grades, bins=6, edgecolor='black')
+    bins = [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+    plt.hist(student_grades, bins=bins, edgecolor='black')
     plt.xticks(range(0, 101, 10))
     plt.yticks(range(0, 31, 5))
     plt.xlim(0, 100)
