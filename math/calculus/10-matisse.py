@@ -10,8 +10,10 @@ def poly_derivative(poly):
 
     :param poly: Description
     """
+    if (type(poly) is not list) or (len(poly) == 0):
+        return None
     result = all(type(item) is int for item in poly)
-    if (result == False) or (type(poly) is not list) or (len(poly) == 0):
+    if (result == False):
         return None
     else:
         if len(poly) == 1:
