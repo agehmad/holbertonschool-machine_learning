@@ -18,6 +18,6 @@ def poly_integral(poly, C=0):
         return None
     else:
         y = [C]
-        for i in range(1, len(poly)):
+        for i in range(0, len(poly)):
             y.append(poly[i] / (i+1))
         return y
