@@ -19,5 +19,5 @@ def poly_integral(poly, C=0):
     else:
         y = [0]
         for i in range(1, len(poly)):
-            y.append(poly[i] / (i+4))
+            y.append(poly[i] / (i+1))
         return y
