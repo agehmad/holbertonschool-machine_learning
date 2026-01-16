@@ -17,7 +17,7 @@ def poly_integral(poly, C=0):
     if result is False:
         return None
     else:
-        y = [C]
-        for i in range(0, len(poly)):
+        y = [C, poly[0]]
+        for i in range(1, len(poly)):
             y.append(poly[i] / (i+1))
         return y
