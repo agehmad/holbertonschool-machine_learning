@@ -13,6 +13,8 @@ def poly_integral(poly, C=0):
     """
     if (type(poly) is not list) or (len(poly) == 0) or (type(C) is not int):
         return None
+    if len(poly) == 1 and poly[0] == 0:
+        return [C]
     result = all(type(item) is int for item in poly)
     if result is False:
         return None
