@@ -10,7 +10,7 @@ def summation_i_squared(n):
 
     :param n: Description
     """
-    if type(n) is not int:
+    if type(n) is not int or n <= 0:
         return None
     else:
         nums = list(range(1, n+1))
