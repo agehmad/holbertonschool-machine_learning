@@ -13,5 +13,6 @@ def summation_i_squared(n):
     nums = list(range(1, n+1))
     if type(n) is int == False:
         return None
-    nums = list(map(lambda x : x**2, nums))
-    return  sum(nums)
+    else:
+        nums = list(map(lambda x : x**2, nums))
+        return  sum(nums)
