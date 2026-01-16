@@ -14,5 +14,5 @@ def summation_i_squared(n):
         return None
     else:
         nums = list(range(1, n+1))
-        nums = list(map(lambda x : x**2, nums))
-        return  sum(nums)
+        nums = list(map(lambda x: x**2, nums))
+        return sum(nums)
