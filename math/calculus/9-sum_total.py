@@ -10,9 +10,9 @@ def summation_i_squared(n):
 
     :param n: Description
     """
-    nums = list(range(1, n+1))
     if type(n) is int == False:
         return None
     else:
+        nums = list(range(1, n+1))
         nums = list(map(lambda x : x**2, nums))
         return  sum(nums)
