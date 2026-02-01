@@ -7,4 +7,3 @@ def matrix_shape(matrix):
             break
         matrix = matrix[0]
     return shape
-    
