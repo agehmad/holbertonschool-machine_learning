@@ -2,5 +2,6 @@
 def matrix_shape(matrix):
     shap = []
     for i in matrix:
-        shap.append(len(i))
+        if type(i) is list:
+            shap.append(len(i))
     return shap
