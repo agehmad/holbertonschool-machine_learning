@@ -2,7 +2,7 @@
 def matrix_shape(matrix):
     shape = []
     while isinstance(matrix, list):
-        shape.append(len(0))
+        shape.append(len(matrix))
         if len(matrix) == 0:
             break
         matrix = matrix[0]
