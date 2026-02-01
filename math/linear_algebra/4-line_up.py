@@ -2,6 +2,8 @@
 """
 Docstring for math.linear_algebra.4-line_up
 """
+
+
 def add_arrays(arr1, arr2):
     """
     Docstring for add_arrays
