@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
+"""
+documetner
+"""
 def matrix_shape(matrix):
+    """
+    Docstring for matrix_shape
+
+    :param matrix: Description
+    """
     shape = []
     while isinstance(matrix, list):
         shape.append(len(matrix))
