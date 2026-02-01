@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+# !/usr/bin/env python3
 """
 Docstring for math.linear_algebra.3-flip_me_over
 """
@@ -10,11 +10,10 @@ def matrix_transpose(matrix):
 
     :param matrix: Description
     """
-    for i in range(len(matrix)):
-        for j in range(len(matrix[0])):
-            if i == j:
-                continue
-            else:
-                matrix[i][j] = matrix[j][i]
-    new_mat = matrix
+    new_mat = []
+    for column in range(len(matrix[0])):
+        temp = []
+        for row in range(len(matrix)):
+            temp.append(matrix[row][column])
+        new_mat.append(temp)
     return new_mat
