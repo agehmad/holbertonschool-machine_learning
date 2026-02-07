@@ -36,7 +36,7 @@ def minor(matrix):
     n = len(matrix)
     if n == 1:
         return [[1]]
-    minor_mat = [] 
+    minor_mat = []
     for row in range(len(matrix)):
         temp = []
         for col in range(len(matrix[row])):
