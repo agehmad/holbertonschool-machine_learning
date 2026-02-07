@@ -25,6 +25,7 @@ def determinant(matrix):
             temp.append(sign*num*determinant(minor))
     return sum(temp)
 
+
 def minor(matrix):
     """Calculating minor matrix of a matrix"""
     if (not isinstance(matrix, list) or
