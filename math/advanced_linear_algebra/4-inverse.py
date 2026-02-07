@@ -79,5 +79,5 @@ def adjugate(matrix):
 def inverse(matrix):
     """calculating inverse of a matrix"""
     if len(matrix) == 1:
-        return [[1/(determinant(matrix))]]
+        return [[1/(determinant(adjugate(matrix)))]]
     return (1/determinant(matrix))*(adjugate(matrix))
