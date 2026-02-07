@@ -17,17 +17,10 @@ def determinant(matrix):
     if n == 2:
         return (matrix[0][0]*matrix[1][1]-matrix[0][1]*matrix[1][0])
     if n > 2:
-        sum = 0
-        k = 2
-        for colm in matrix[0]:
-            minor = []
-            for row in range(1, matrix):
-                temp = []
-                for col in range(matrix[row]):
-                    if col != matrix[0].index(colm):
-                        temp.append(matrix[row][col])
-                minor.append(temp)
-            det = determinant(minor)
-            sum = sum + (-1)**k*(col*det)
-            k += 1
-        return sum
+        temp = []
+        for ind, num in enumerate(matrix[0]):
+            minor = [[matrix[i][j] for j in range(len(matrix[0])) if j != ind]
+                     for i in range(len(matrix)) if i != 0]
+            sign = 1 if ind % 2 == 0 else -1
+            temp.append(sign*num*determinant(minor))
+    return sum(temp)
