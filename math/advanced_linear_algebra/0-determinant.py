@@ -9,9 +9,9 @@ def determinant(matrix):
         raise TypeError("matrix must be a list of lists")
     if any(len(row) != len(matrix) for row in matrix):
         raise ValueError("matrix must be a square matrix")
-    if matrix == [[]]:
-        return 1
     n = len(matrix)
+    if n == 0:
+        return 1
     if n == 1:
         return matrix[0][0]
     if n == 2:
