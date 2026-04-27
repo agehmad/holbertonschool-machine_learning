@@ -25,8 +25,8 @@ class Neuron:
     def b(self):
         '''getter for b'''
         return self.__b
-    @property
 
+    @property
     def A(self):
         '''getter for A'''
         return self.__A
