@@ -3,7 +3,8 @@
 import tensorflow.keras as K
 
 
-def train_model(network, data, labels, batch_size, epochs, verbose=True, shuffle=False):
+def train_model(network, data, labels, batch_size, 
+                epochs, verbose=True, shuffle=False):
     """documented"""
     history = network.fit(
         data,
