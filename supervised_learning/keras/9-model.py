@@ -8,6 +8,7 @@ def save_model(network, filename):
     network.save(filename)
     return None
 
+
 def load_model(filename):
     """documented"""
     return K.models.load_model(filename)
