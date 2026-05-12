@@ -25,20 +25,10 @@ def train_model(network, data, labels, batch_size,
                 return alpha / (1 + decay_rate * epoch)
             callbacks.append(K.callbacks.LearningRateScheduler(learning_rate,
                                                                verbose=1))
-            history = network.fit(
-                data,
-                labels,
-                batch_size=batch_size,
-                epochs=epochs,
-                verbose=verbose,
-                shuffle=shuffle,
-                validation_data=validation_data,
-                callbacks=callbacks
-            )
         if save_best:
             saving = K.callbacks.ModelCheckpoint(
                 filepath=filepath,
-                monitor='val_los',
+                monitor='val_loss',
                 verbose=0,
                 save_best_only=True,
                 save_weights_only=False,
@@ -53,24 +43,14 @@ def train_model(network, data, labels, batch_size,
                 patience=patience
             )
             callbacks.append(early_stopping)
-            history = network.fit(
-                data,
-                labels,
-                batch_size=batch_size,
-                epochs=epochs,
-                verbose=verbose,
-                shuffle=shuffle,
-                validation_data=validation_data,
-                callbacks=callbacks
-            )
-        else:
-            history = network.fit(
-                data,
-                labels,
-                batch_size=batch_size,
-                epochs=epochs,
-                verbose=verbose,
-                shuffle=shuffle,
-                validation_data=validation_data
+        history = network.fit(
+            data,
+            labels,
+            batch_size=batch_size,
+            epochs=epochs,
+            verbose=verbose,
+            shuffle=shuffle,
+            validation_data=validation_data,
+            callbacks=callbacks
             )
     return history
