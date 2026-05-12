@@ -22,6 +22,16 @@ def train_model(network, data, labels, batch_size,
             def learning_rate(epoch):
                 return alpha / (1 + decay_rate * epoch)
             callbacks.append(K.callbacks.LearningRateScheduler(learning_rate, verbose=1))
+            history = network.fit(
+                data,
+                labels,
+                batch_size=batch_size,
+                epochs=epochs,
+                verbose=verbose,
+                shuffle=shuffle,
+                validation_data=validation_data,
+                callbacks=callbacks
+            )
         if early_stopping is True:
             early_stopping = K.callbacks.EarlyStopping(
                 monitor='val_loss',
