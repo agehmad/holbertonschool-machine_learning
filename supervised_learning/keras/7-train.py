@@ -19,13 +19,9 @@ def train_model(network, data, labels, batch_size,
         )
     else:
         if learning_rate_decay:
-            learning_rate = K.optimizers.schedules.InverseTimeDecay(
-                alpha,
-                decay_steps=1,
-                decay_rate=decay_rate,
-                staircase=True
-            )
-            callbacks.append(learning_rate)
+            def learning_rate(epoch):
+                return alpha / (1 + decay_rate * epoch)
+            callbacks.append(K.callbacks.LearningRateScheduler(learning_rate, verbose=1))
         if early_stopping is True:
             early_stopping = K.callbacks.EarlyStopping(
                 monitor='val_loss',
