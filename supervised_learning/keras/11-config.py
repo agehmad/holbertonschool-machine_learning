@@ -6,7 +6,7 @@ import tensorflow.keras as K
 def save_config(network, filename):
     """
     Saves a model's configuration in JSON format.
-    
+
     network: the model whose configuration should be saved
     filename: the path of the file that the configuration should be saved to
     """
@@ -19,8 +19,8 @@ def save_config(network, filename):
 def load_config(filename):
     """
     Loads a model with a specific configuration.
-    
-    filename: the path of the file containing the model's configuration 
+
+    filename: the path of the file containing the model's configuration
               in JSON format
     Returns: the loaded model
     """
