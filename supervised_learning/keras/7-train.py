@@ -7,6 +7,7 @@ def train_model(network, data, labels, batch_size,
                 epochs, validation_data=None, early_stopping=False,
                 patience=0, learning_rate_decay=False, alpha=0.1, decay_rate=1, verbose=True, shuffle=False):
     """documented"""
+    callbacks = []
     if validation_data is None:
         history = network.fit(
             data,
@@ -24,11 +25,13 @@ def train_model(network, data, labels, batch_size,
                 decay_rate=decay_rate,
                 staircase=True
             )
+            callbacks.append(learning_rate)
         if early_stopping is True:
-            early_stopping_callback = K.callbacks.EarlyStopping(
+            early_stopping = K.callbacks.EarlyStopping(
                 monitor='val_loss',
                 patience=patience
             )
+            callbacks.append(early_stopping)
             history = network.fit(
                 data,
                 labels,
@@ -37,7 +40,7 @@ def train_model(network, data, labels, batch_size,
                 verbose=verbose,
                 shuffle=shuffle,
                 validation_data=validation_data,
-                callbacks=[early_stopping_callback, learning_rate]
+                callbacks=callbacks
             )
         else:
             history = network.fit(
